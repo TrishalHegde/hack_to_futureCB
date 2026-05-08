@@ -1,143 +1,67 @@
-# Anveshak AI — Short Project README
 
-## Overview
+# 🛰️ Overview
 
-Anveshak AI is an AI-powered misinformation verification platform that helps users analyze suspicious news, viral claims, social media messages, Telegram forwards, and YouTube content using evidence-based credibility analysis.
+A multilingual AI platform for detecting and attributing coordinated disinformation campaigns.
 
-The platform combines:
+The platform analyzes suspicious viral claims, forwarded messages, and social media content across multiple regional languages using:
+- 📰 trusted news comparisons
+- ✅ fact-check datasets
+- 📲 Telegram evidence
+- 🎥 YouTube evidence
+- 🤖 AI linguistic analysis
+- 🔍 semantic similarity matching
 
-* Fact-check datasets
-* Trusted news comparisons
-* Telegram evidence analysis
-* YouTube evidence analysis
-* AI linguistic pattern detection
-* Semantic similarity matching
-
-The system does **not** claim absolute truth detection.
-Instead, it provides:
-
-* Credibility scores
-* Evidence-backed analysis
-* Risk indicators
-* Source attribution
+Instead of claiming absolute truth detection, the system provides:
+- 📊 credibility scores
+- 📌 evidence-based analysis
+- ⚠️ misinformation risk indicators
+- 🌐 attribution insights
 
 ---
 
-# Tech Stack
+# ⚙️ Workflow
+
+1. User pastes suspicious claim/news/message  
+2. AI preprocesses and detects language  
+3. System compares content with trusted datasets and platform evidence  
+4. AI performs semantic similarity and manipulation analysis  
+5. Platform generates:
+   - ✅ verdict
+   - 📈 credibility score
+   - 🔗 evidence matches
+   - 🕒 spread timeline
+   - 🚨 risk indicators
+
+---
+
+# 🛠️ Tech Stack
 
 ## Frontend
-
-* React + Vite
-* TailwindCSS
-* Framer Motion
-* Axios
-* Recharts
+- React + Vite
+- TailwindCSS
+- Framer Motion
+- Axios
+- Recharts
 
 ## Backend
-
-* FastAPI
-* SQLite
-* SQLAlchemy
-* Pydantic
+- FastAPI
+- SQLite
+- SQLAlchemy
+- Pydantic
 
 ## AI/NLP
-
-* Sentence Transformers
-* Scikit-learn
-* Langdetect
-* NLTK / spaCy
-* Cosine Similarity
+- Sentence Transformers
+- Scikit-learn
+- Langdetect
+- NLTK / spaCy
 
 ## Integrations
-
-* Telethon
-* YouTube Data API v3
-* RSS/News feeds
+- Telethon
+- YouTube Data API v3
 
 ---
 
-# Team Structure (4 Members)
-
-## 1. Frontend/UI Lead
-
-### Responsibilities
-
-* Landing page
-* Analysis dashboard
-* Charts & visualizations
-* Reusable components
-* API integration
-* Responsive UI
-
-### Branch Name
-
-```bash
-frontend-ui
-```
-
----
-
-## 2. Backend/API Lead
-
-### Responsibilities
-
-* FastAPI backend
-* API routes
-* SQLite integration
-* Database models
-* Swagger docs
-* Authentication
-* Service architecture
-
-### Branch Name
-
-```bash
-backend-api
-```
-
----
-
-## 3. AI/NLP Engineer
-
-### Responsibilities
-
-* Claim verification pipeline
-* Semantic similarity
-* Credibility scoring
-* Linguistic analysis
-* Verdict generation
-* NLP preprocessing
-
-### Branch Name
-
-```bash
-ai-engine
-```
-
----
-
-## 4. Data & Integrations Engineer
-
-### Responsibilities
-
-* Fact-check datasets
-* Trusted news datasets
-* Telegram integration
-* YouTube integration
-* Mock demo datasets
-* Evidence timelines
-
-### Branch Name
-
-```bash
-data-integrations
-```
-
----
-
-# Suggested Git Workflow
-
-## Main Branches
+# 🌿 Team Branches
 
 ```bash
 main
@@ -146,70 +70,55 @@ frontend-ui
 backend-api
 ai-engine
 data-integrations
-```
-
-## Workflow
-
-1. Work on feature branch
-2. Push commits regularly
-3. Create Pull Request to `dev`
-4. Test integration
-5. Merge into `main` before demo
+````
 
 ---
 
-# Suggested Folder Structure
+# 👥 Team Responsibilities
 
-```bash
-anveshak-ai/
-│
-├── frontend/
-│
-├── backend/
-│   ├── routes/
-│   ├── services/
-│   ├── models/
-│   ├── utils/
-│   ├── data/
-│
-├── datasets/
-│
-├── docs/
-│
-└── README.md
-```
+## 🎨 Frontend/UI
 
----
+* Landing page
+* Analysis dashboard
+* Visualizations
+* API integration
 
-# MVP Goal
+## ⚡ Backend/API
 
-Build a hackathon-ready misinformation verification platform that:
+* FastAPI backend
+* API routes
+* Database integration
+* Authentication
 
-* accepts suspicious claims,
-* analyzes evidence,
-* generates credibility insights,
-* and visualizes misinformation spread.
+## 🧠 AI/NLP
+
+* Verification pipeline
+* Similarity matching
+* Credibility scoring
+* Verdict generation
+
+## 📡 Data & Integrations
+
+* Fact-check datasets
+* Telegram integration
+* YouTube integration
+* Mock analytics data
 
 ---
 
-# Important Constraints
+# 🚀 MVP Features
+
+* Claim verification
+* Multilingual analysis
+* Evidence matching
+* Credibility scoring
+* Spread timeline visualization
+
+---
+
+# ⚠️ Constraints
 
 * No private message scraping
-* No real-time internet-wide surveillance
+* No real-time global surveillance
 * No political censorship
 * No guaranteed truth detection
-
----
-
-# Demo Flow
-
-1. User pastes suspicious claim
-2. AI analyzes text
-3. System compares evidence
-4. Credibility score generated
-5. Dashboard displays:
-
-   * verdict
-   * evidence
-   * spread timeline
-   * risk indicators
