@@ -6,11 +6,14 @@ import os
 from datetime import datetime
 
 FEEDS = {
-    "reuters": "https://www.reutersagency.com/feed/", # Note: Real feeds might vary, these are placeholders
+    "reuters": "https://www.reutersagency.com/feed/",
     "bbc": "http://feeds.bbci.co.uk/news/rss.xml",
     "who": "https://www.who.int/rss-feeds/news-english.xml",
     "ndtv": "https://feeds.feedburner.com/ndtvnews-top-stories",
-    "indianexpress": "https://indianexpress.com/feed/"
+    "indianexpress": "https://indianexpress.com/feed/",
+    "pib": "https://pib.gov.in/RssXml.aspx?RegionId=3",
+    "altnews": "https://www.altnews.in/feed/",
+    "nasa": "https://www.nasa.gov/news-release/feed/"
 }
 
 DB_PATH = 'data/db/anveshak.db'
