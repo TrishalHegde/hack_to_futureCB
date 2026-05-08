@@ -1,0 +1,10 @@
+fastapi==0.111.0
+uvicorn==0.29.0
+sqlalchemy==2.0.29
+pydantic==2.7.1
+langdetect==1.0.9
+sentence-transformers==2.7.0
+python-dotenv==1.0.1
+telethon==1.35.0
+requests==2.31.0
+google-api-python-client==2.128.0
