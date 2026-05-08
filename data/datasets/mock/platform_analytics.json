@@ -1,0 +1,34 @@
+{
+  "total_claims_analyzed": 1250,
+  "verdict_distribution": {
+    "FALSE": 750,
+    "MISLEADING": 300,
+    "UNVERIFIED": 150,
+    "TRUE": 50
+  },
+  "platform_distribution": {
+    "Telegram": 550,
+    "WhatsApp": 400,
+    "YouTube": 200,
+    "Twitter/X": 100
+  },
+  "category_breakdown": {
+    "health": 450,
+    "politics": 400,
+    "technology": 200,
+    "environment": 100,
+    "social": 100
+  },
+  "severity_stats": {
+    "critical": 150,
+    "high": 400,
+    "medium": 500,
+    "low": 200
+  },
+  "monthly_trends": [
+    { "month": "Oct 2025", "count": 180 },
+    { "month": "Nov 2025", "count": 250 },
+    { "month": "Dec 2025", "count": 520 },
+    { "month": "Jan 2026", "count": 300 }
+  ]
+}
