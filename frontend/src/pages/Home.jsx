@@ -1,120 +1,111 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { Search, ShieldAlert, Cpu, Globe, ArrowRight, Zap } from 'lucide-react';
+import { Search, ShieldAlert, Cpu, Globe, ArrowRight, Zap, Fingerprint } from 'lucide-react';
 
 const Home = () => {
   const [claim, setClaim] = useState('');
-  const [isHovered, setIsHovered] = useState(false);
   const navigate = useNavigate();
 
   const handleVerify = (e) => {
     e.preventDefault();
     if (!claim.trim()) return;
-    // For now, just navigate to analysis page with mock data
     navigate('/analysis', { state: { claim } });
   };
 
   const stats = [
-    { label: 'Claims Verified', value: '245k+', icon: <Zap size={20} className="text-cyber-neon" /> },
-    { label: 'Sources Tracked', value: '1.2k', icon: <Globe size={20} className="text-cyber-purple" /> },
-    { label: 'Avg Latency', value: '450ms', icon: <Cpu size={20} className="text-cyber-green" /> },
+    { label: 'Analysed Claims', value: '245k+', icon: <Zap size={18} className="text-indigo-400" /> },
+    { label: 'Neural Sources', value: '1,280', icon: <Globe size={18} className="text-purple-400" /> },
+    { label: 'Response Time', value: '450ms', icon: <Cpu size={18} className="text-slate-400" /> },
   ];
 
-  const languages = ['English', 'Hindi', 'Tamil', 'Telugu', 'Kannada', 'Bengali', 'Marathi'];
-
   return (
-    <div className="flex flex-col items-center gap-16 py-12">
+    <div className="flex flex-col items-center gap-24 py-20 relative">
+      {/* Background Orbs */}
+      <div className="accent-glow top-0 left-1/4 scale-150" />
+      <div className="accent-glow bottom-0 right-1/4 scale-150 bg-purple-500/10" />
+
       {/* Hero Section */}
-      <div className="text-center space-y-6 max-w-4xl">
+      <div className="text-center space-y-8 max-w-4xl">
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
+          transition={{ duration: 0.8 }}
         >
-          <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-cyber-neon/30 bg-cyber-neon/10 text-cyber-neon text-[10px] font-bold tracking-[0.2em] uppercase mb-4">
-            <ShieldAlert size={12} /> Powered by OSINT Intelligence
-          </span>
-          <h1 className="text-6xl md:text-7xl font-black tracking-tight leading-none">
-            Expose the <span className="neon-text-blue italic">Hidden</span> <br />
-            Truth with <span className="neon-text-purple">VAULTX</span>
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-white/5 bg-white/5 text-slate-400 text-[10px] font-bold tracking-[0.3em] uppercase mb-8 backdrop-blur-sm">
+            <Fingerprint size={12} className="text-indigo-400" /> Advanced Verification Protocols
+          </div>
+          <h1 className="text-7xl md:text-8xl font-bold tracking-tight leading-[1.1] text-white">
+            Secure the <span className="text-gradient">Information</span> <br />
+            <span className="text-indigo-400">Integrity</span> of VAULTX
           </h1>
-          <p className="text-gray-400 text-lg mt-6 max-w-2xl mx-auto font-light leading-relaxed">
-            A state-of-the-art misinformation verification engine. Analyze viral claims, 
-            social messages, and media evidence with 99% semantic accuracy.
+          <p className="text-slate-400 text-xl mt-8 max-w-2xl mx-auto font-light leading-relaxed">
+            The next generation of misinformation analysis. Leverage neural networks 
+            to identify viral anomalies and linguistic manipulation in real-time.
           </p>
         </motion.div>
       </div>
 
       {/* Input Section */}
       <motion.div
-        initial={{ opacity: 0, scale: 0.95 }}
-        animate={{ opacity: 1, scale: 1 }}
-        transition={{ delay: 0.2, duration: 0.5 }}
-        className="w-full max-w-3xl relative group"
+        initial={{ opacity: 0, y: 40 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ delay: 0.3, duration: 0.8 }}
+        className="w-full max-w-4xl"
       >
-        <div className="absolute -inset-1 bg-gradient-to-r from-cyber-neon to-cyber-purple rounded-2xl blur opacity-20 group-hover:opacity-40 transition duration-1000 group-hover:duration-200" />
-        
-        <form onSubmit={handleVerify} className="relative glass p-8 space-y-6">
-          <div className="space-y-2">
-            <label className="text-xs font-bold text-gray-500 uppercase tracking-widest ml-1">
-              Analyze Suspicious Claim
-            </label>
+        <div className="glass-card p-10 space-y-8">
+          <div className="space-y-3">
+            <div className="flex items-center justify-between px-1">
+              <label className="text-[10px] font-bold text-slate-500 uppercase tracking-[0.2em]">
+                Neural Input Buffer
+              </label>
+              <div className="flex gap-2">
+                {['EN', 'HI', 'TA', 'TE'].map(l => (
+                  <span key={l} className="text-[9px] font-mono text-indigo-400/60">{l}</span>
+                ))}
+              </div>
+            </div>
             <textarea
               value={claim}
               onChange={(e) => setClaim(e.target.value)}
-              placeholder="Paste message, viral post, or claim here..."
-              className="w-full h-40 cyber-input resize-none text-lg"
+              placeholder="Paste suspicious data stream for analysis..."
+              className="w-full h-48 glass-input text-lg font-light leading-relaxed placeholder:text-slate-600"
             />
           </div>
 
-          <div className="flex flex-col md:flex-row items-center justify-between gap-6">
-            <div className="flex flex-wrap gap-2 justify-center md:justify-start">
-              {languages.map((lang) => (
-                <span key={lang} className="px-3 py-1 rounded-md bg-white/5 border border-white/10 text-[10px] text-gray-500 font-medium hover:border-cyber-neon/30 hover:text-gray-300 cursor-default transition-all">
-                  {lang}
-                </span>
-              ))}
-            </div>
-
+          <div className="flex items-center justify-end">
             <button
-              type="submit"
+              onClick={handleVerify}
               disabled={!claim.trim()}
-              onMouseEnter={() => setIsHovered(true)}
-              onMouseLeave={() => setIsHovered(false)}
-              className="btn-primary group flex items-center gap-3 w-full md:w-auto"
+              className="btn-glass flex items-center gap-3 px-10 py-4 text-lg active:scale-95 disabled:opacity-30"
             >
-              VERIFY CLAIM
-              <ArrowRight className={`transition-transform duration-300 ${isHovered ? 'translate-x-1' : ''}`} size={20} />
+              INITIALIZE VERIFICATION
+              <ArrowRight size={22} className="text-indigo-300" />
             </button>
           </div>
-        </form>
+        </div>
       </motion.div>
 
-      {/* Stats Section */}
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-8 w-full max-w-5xl">
+      {/* Stats Grid */}
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-12 w-full max-w-5xl">
         {stats.map((stat, idx) => (
           <motion.div
             key={stat.label}
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.4 + (idx * 0.1) }}
-            className="glass-card p-6 flex flex-col items-center text-center gap-4"
+            transition={{ delay: 0.6 + (idx * 0.1) }}
+            className="flex flex-col items-center text-center gap-4"
           >
-            <div className="p-3 bg-white/5 rounded-2xl border border-white/10 group-hover:border-white/20">
+            <div className="w-12 h-12 glass flex items-center justify-center rounded-2xl mb-2">
               {stat.icon}
             </div>
-            <div>
-              <div className="text-3xl font-black text-white">{stat.value}</div>
-              <div className="text-xs text-gray-500 uppercase tracking-widest font-bold mt-1">{stat.label}</div>
+            <div className="space-y-1">
+              <div className="text-4xl font-bold text-white tracking-tight">{stat.value}</div>
+              <div className="text-[10px] text-slate-500 uppercase tracking-[0.3em] font-bold">{stat.label}</div>
             </div>
           </motion.div>
         ))}
       </div>
-
-      {/* Background decoration */}
-      <div className="fixed top-1/2 left-0 w-full h-[1px] bg-white/5 -z-20 pointer-events-none" />
-      <div className="fixed top-0 left-1/2 w-[1px] h-full bg-white/5 -z-20 pointer-events-none" />
     </div>
   );
 };
