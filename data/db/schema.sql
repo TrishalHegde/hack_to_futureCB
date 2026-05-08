@@ -68,3 +68,15 @@ CREATE TABLE IF NOT EXISTS platform_analytics (
     key TEXT PRIMARY KEY,
     value TEXT -- JSON string containing stats
 );
+
+-- ShareChat posts table
+CREATE TABLE IF NOT EXISTS sharechat_posts (
+    post_id TEXT PRIMARY KEY,
+    caption TEXT,
+    author_name TEXT,
+    views INTEGER,
+    shares INTEGER,
+    timestamp TEXT,
+    tags TEXT, -- JSON string
+    post_url TEXT
+);
