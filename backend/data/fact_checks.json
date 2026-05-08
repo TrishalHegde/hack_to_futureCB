@@ -1,0 +1,20 @@
+[
+    {
+        "text": "The government is hiding the true cause of the new virus to control the population.",
+        "verdict": "False",
+        "source": "FactCheck.org",
+        "details": "There is no evidence of a cover-up. The virus origins are being studied transparently."
+    },
+    {
+        "text": "Drinking boiled garlic water cures COVID-19 immediately.",
+        "verdict": "False",
+        "source": "WHO",
+        "details": "Garlic is healthy but there is no evidence it cures COVID-19."
+    },
+    {
+        "text": "New law passed to tax all social media messages starting next month.",
+        "verdict": "False",
+        "source": "PIB Fact Check",
+        "details": "No such law has been proposed or passed by the Indian government."
+    }
+]
