@@ -1,0 +1,38 @@
+[
+  {
+    "video_id": "YT_MIS_001",
+    "title": "THE TRUTH THEY WON'T TELL YOU ABOUT THE VACCINE",
+    "views": 450000,
+    "likes": 22000,
+    "comments_count": 8500,
+    "channel": "TruthSeekerTV",
+    "publish_date": "2025-12-05T14:00:00Z",
+    "risk_level": "critical",
+    "flagged_reasons": ["Medical misinformation", "Conspiracy theories"],
+    "thumbnail_url": "https://example.com/thumb1.jpg"
+  },
+  {
+    "video_id": "YT_MIS_002",
+    "title": "5G TOWERS AND YOUR HEALTH: A HIDDEN DANGER?",
+    "views": 120000,
+    "likes": 5600,
+    "comments_count": 1200,
+    "channel": "HealthyLivingVibes",
+    "publish_date": "2025-11-20T10:30:00Z",
+    "risk_level": "high",
+    "flagged_reasons": ["Unverified health claims"],
+    "thumbnail_url": "https://example.com/thumb2.jpg"
+  },
+  {
+    "video_id": "YT_MIS_003",
+    "title": "ELECTION FRAUD EXPOSED: WATCH BEFORE IT'S TAKEN DOWN",
+    "views": 890000,
+    "likes": 65000,
+    "comments_count": 24000,
+    "channel": "PatriotUpdateNews",
+    "publish_date": "2025-12-11T06:00:00Z",
+    "risk_level": "critical",
+    "flagged_reasons": ["Misleading election information", "Inciteful content"],
+    "thumbnail_url": "https://example.com/thumb3.jpg"
+  }
+]

@@ -1,0 +1,99 @@
+[
+  {
+    "claim_id": "FC001",
+    "claim": "Vaccines contain microchips for tracking population.",
+    "spread_timeline": [
+      {
+        "timestamp": "2025-12-01T08:30:00Z",
+        "channel": "HealthTruthsGlobal",
+        "views": 1200,
+        "forwards": 340,
+        "sentiment": "alarmist"
+      },
+      {
+        "timestamp": "2025-12-01T10:15:00Z",
+        "channel": "ViralNewsIndia",
+        "views": 8500,
+        "forwards": 2100,
+        "sentiment": "sensationalist"
+      },
+      {
+        "timestamp": "2025-12-01T14:45:00Z",
+        "channel": "TheDeepTruthNetwork",
+        "views": 25000,
+        "forwards": 6200,
+        "sentiment": "conspiratorial"
+      },
+      {
+        "timestamp": "2025-12-02T09:00:00Z",
+        "channel": "GlobalResistanceUpdate",
+        "views": 120000,
+        "forwards": 35000,
+        "sentiment": "hostile"
+      }
+    ],
+    "total_reach": 154700,
+    "spread_velocity": "high",
+    "peak_time": "2025-12-02T09:00:00Z"
+  },
+  {
+    "claim_id": "FC002",
+    "claim": "5G mobile networks spread the coronavirus.",
+    "spread_timeline": [
+      {
+        "timestamp": "2025-11-15T12:00:00Z",
+        "channel": "TechConspiracyCentral",
+        "views": 500,
+        "forwards": 120,
+        "sentiment": "speculative"
+      },
+      {
+        "timestamp": "2025-11-16T08:00:00Z",
+        "channel": "NaturalHealingAdvocates",
+        "views": 4200,
+        "forwards": 980,
+        "sentiment": "alarmist"
+      },
+      {
+        "timestamp": "2025-11-17T15:30:00Z",
+        "channel": "MainstreamNewsBuster",
+        "views": 15000,
+        "forwards": 3800,
+        "sentiment": "sensationalist"
+      }
+    ],
+    "total_reach": 19700,
+    "spread_velocity": "medium",
+    "peak_time": "2025-11-17T15:30:00Z"
+  },
+  {
+    "claim_id": "FC003",
+    "claim": "Electronic Voting Machines (EVMs) have been hacked nationwide.",
+    "spread_timeline": [
+      {
+        "timestamp": "2025-12-10T18:00:00Z",
+        "channel": "PoliticalInsidersIndia",
+        "views": 2500,
+        "forwards": 800,
+        "sentiment": "urgent"
+      },
+      {
+        "timestamp": "2025-12-10T19:30:00Z",
+        "channel": "DemocraticWatchdog",
+        "views": 12000,
+        "forwards": 4500,
+        "sentiment": "alarmist"
+      },
+      {
+        "timestamp": "2025-12-11T07:15:00Z",
+        "channel": "NationalAlertsDaily",
+        "views": 75000,
+        "forwards": 22000,
+        "sentiment": "hostile"
+      }
+    ],
+    "total_reach": 89500,
+    "spread_velocity": "very_high",
+    "peak_time": "2025-12-11T07:15:00Z"
+  }
+]
