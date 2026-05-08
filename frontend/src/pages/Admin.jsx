@@ -45,7 +45,7 @@ const Admin = () => {
       <div className="flex justify-between items-end">
         <div>
           <h1 className="text-4xl font-black neon-text-blue tracking-tighter uppercase">Command Center</h1>
-          <p className="text-gray-500 text-xs font-bold tracking-widest uppercase mt-1 ml-1">Anveshak Intelligence Dashboard</p>
+          <p className="text-gray-500 text-xs font-bold tracking-widest uppercase mt-1 ml-1">VAULTX Intelligence Dashboard</p>
         </div>
         <div className="flex gap-2 text-[10px] font-mono text-cyber-neon border border-cyber-neon/20 bg-cyber-neon/5 px-3 py-1.5 rounded-lg">
           <Clock size={12} /> LAST_SYNC: 19:15:22_UTC

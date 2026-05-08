@@ -19,7 +19,7 @@ const Navbar = () => {
             <Shield className="text-cyber-neon" size={24} />
           </div>
           <span className="text-xl font-black tracking-tighter neon-text-blue">
-            ANVESHAK <span className="text-gray-400 font-light">AI</span>
+            VAULTX <span className="text-gray-400 font-light">SYSTEMS</span>
           </span>
         </Link>
 

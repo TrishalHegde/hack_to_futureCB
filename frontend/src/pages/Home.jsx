@@ -37,7 +37,7 @@ const Home = () => {
           </span>
           <h1 className="text-6xl md:text-7xl font-black tracking-tight leading-none">
             Expose the <span className="neon-text-blue italic">Hidden</span> <br />
-            Truth with <span className="neon-text-purple">Anveshak AI</span>
+            Truth with <span className="neon-text-purple">VAULTX</span>
           </h1>
           <p className="text-gray-400 text-lg mt-6 max-w-2xl mx-auto font-light leading-relaxed">
             A state-of-the-art misinformation verification engine. Analyze viral claims, 

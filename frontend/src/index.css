@@ -1,36 +1,96 @@
 @import "tailwindcss";
 @config "../tailwind.config.js";
 
+@theme {
+  --color-cyber-bg: #050505;
+  --color-cyber-card: rgba(20, 20, 20, 0.7);
+  --color-cyber-neon: #00f3ff;
+  --color-cyber-purple: #bc13fe;
+  --color-cyber-green: #39ff14;
+  --color-cyber-red: #ff003c;
+  
+  --shadow-neon-blue: 0 0 10px #00f3ff, 0 0 20px rgba(0, 243, 255, 0.5);
+  --shadow-neon-purple: 0 0 10px #bc13fe, 0 0 20px rgba(188, 19, 254, 0.5);
+}
+
 @layer base {
   body {
-    @apply bg-cyber-bg text-gray-100 font-sans overflow-x-hidden;
+    background-color: var(--color-cyber-bg);
+    color: rgb(243 244 246);
+    font-family: ui-sans-serif, system-ui, sans-serif;
+    overflow-x: hidden;
   }
 }
 
-@layer components {
-  .glass {
-    @apply bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl;
-  }
-  
-  .glass-card {
-    @apply glass transition-all duration-300 hover:bg-white/10 hover:border-white/20;
-  }
-  
-  .neon-text-blue {
-    @apply text-cyber-neon drop-shadow-[0_0_8px_rgba(0,243,255,0.8)];
-  }
-  
-  .neon-text-purple {
-    @apply text-cyber-purple drop-shadow-[0_0_8px_rgba(188,19,254,0.8)];
-  }
+/* Custom UI Components */
+.glass {
+  background-color: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 1rem;
+}
 
-  .cyber-input {
-    @apply bg-black/40 border border-white/10 rounded-xl px-4 py-3 focus:outline-none focus:border-cyber-neon/50 focus:ring-1 focus:ring-cyber-neon/30 transition-all text-white placeholder-gray-500;
-  }
+.glass-card {
+  background-color: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 1rem;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
 
-  .btn-primary {
-    @apply bg-cyber-neon text-black font-bold px-8 py-3 rounded-xl hover:bg-cyber-neon/80 transition-all active:scale-95 shadow-neon-blue disabled:opacity-50 disabled:cursor-not-allowed;
-  }
+.glass-card:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+.neon-text-blue {
+  color: var(--color-cyber-neon);
+  filter: drop-shadow(0 0 8px rgba(0, 243, 255, 0.8));
+}
+
+.neon-text-purple {
+  color: var(--color-cyber-purple);
+  filter: drop-shadow(0 0 8px rgba(188, 19, 254, 0.8));
+}
+
+.cyber-input {
+  background-color: rgba(0, 0, 0, 0.4);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 0.75rem;
+  padding: 0.75rem 1rem;
+  transition: all 0.2s;
+  color: white;
+}
+
+.cyber-input:focus {
+  outline: none;
+  border-color: rgba(0, 243, 255, 0.5);
+  box-shadow: 0 0 0 1px rgba(0, 243, 255, 0.3);
+}
+
+.btn-primary {
+  background-color: var(--color-cyber-neon);
+  color: black;
+  font-weight: 700;
+  padding: 0.75rem 2rem;
+  border-radius: 0.75rem;
+  transition: all 0.2s;
+  box-shadow: var(--shadow-neon-blue);
+}
+
+.btn-primary:hover {
+  background-color: rgba(0, 243, 255, 0.8);
+}
+
+.btn-primary:active {
+  transform: scale(0.95);
+}
+
+.btn-primary:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
 }
 
 /* Custom animations */
